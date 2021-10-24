@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        /* i could set the font on tailwind.config.js, and use all of tailwind power
+            but is not required because of the simplicity of the app
+        */
+        font-family: Roboto, sans-serif;
+    }
+
+    body {
+        color: #e1e1e1;
+        background: #121214;
+    }
+}
+
+.contentWrapper {
+    @apply flex-1 max-w-xs sm:max-w-md lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl h-screen m-auto grid lg:grid-cols-[1fr,453px] gap-x-[120px] relative justify-center ;
+}
+
+/* Message List - start*/
+.message {
+    @apply max-w-[440px] even:ml-20 first:animate-pulse;
+}
+
+.messageContent {
+    @apply text-sm sm:text-base md:text-lg xl:text-xl leading-7;
+}
+
+.messageUser {
+    @apply flex items-center mt-4;
+}
+
+.userImage {
+    @apply p-[2px] bg-gradient-to-br from-[#ff008e] to-[#ffcd1e] rounded-full;
+}
+
+.user-img {
+    @apply w-[30px] h-[30px] rounded-full border-4 border-[#121214];
+}
+
+.userName {
+    @apply text-xs sm:text-sm md:text-base xl:text-lg ml-3;
+}
+/* Message List - end*/
