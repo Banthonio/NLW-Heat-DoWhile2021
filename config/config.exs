@@ -7,6 +7,7 @@
 # General application configuration
 import Config
 
+
 config :heat_tags,
   ecto_repos: [HeatTags.Repo]
 
